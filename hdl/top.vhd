@@ -21,9 +21,9 @@ begin
 	
 		i_led_controller : entity work.led_control(rtl)
 		port map (
-			clk     => GCLK,
-			switch  => SW(i),
-			led     => LED(i)
+			iClk     => GCLK,
+			iSwitch  => SW(i),
+			oLed     => LED(i)
 		);
 
 	end generate;
