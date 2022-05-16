@@ -12,17 +12,17 @@ port (
 end entity led_control;
 
 architecture rtl of led_control is
-    signal led_on   : std_logic := '0';
+    signal led   : std_logic := '0';
 begin
 
-    oLed <= led_on;
+    oLed <= led;
 
     process (iClk)
     begin
         if rising_edge(iClk) then
             -- Currently the LED is set to always off
             -- How can we use the switch to decide when to turn it on?
-            led_on <= '0';
+            led <= '0';
         end if;
     end process;
 
